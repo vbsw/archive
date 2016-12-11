@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+	<extension
+			point="org.eclipse.ui.editors">
+		<editor
+			name="GLSL Ed"
+			extensions="glsl,vert,frag"
+			icon="icons/glsl_file_obj.gif"
+			contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+			class="com.github.vitalibaumtrok.glsled.editors.GLSLEditor"
+			id="com.github.vitalibaumtrok.glsled.editors.GLSLEditor">
+		</editor>
+	</extension>
+
+	<extension
+			point="org.eclipse.ui.contexts">
+		<context
+			name="com.github.vitalibaumtrok.glsled.editors.context"
+			description="GLSL Editor Context"
+			id="com.github.vitalibaumtrok.glsled.editors.context">
+		</context>
+	</extension>
+
+	<extension
+			point="org.eclipse.ui.commands">
+		<command
+			name="Toggle Comment"
+			id="com.github.vitalibaumtrok.glsled.commands.togglecomment">
+		</command>
+	</extension>
+
+	<extension
+			point="org.eclipse.ui.handlers">
+		<handler
+			commandId="com.github.vitalibaumtrok.glsled.commands.togglecomment"
+			class="com.github.vitalibaumtrok.glsled.handlers.GLSLToggleComment">
+		</handler>
+	</extension>
+
+	<extension
+			point="org.eclipse.ui.bindings">
+		<key
+			sequence="Ctrl+Shift+/"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+			commandId="com.github.vitalibaumtrok.glsled.commands.togglecomment"
+			contextId="com.github.vitalibaumtrok.glsled.editors.context"/>
+	</extension>
+
+	<extension
+			point="org.eclipse.ui.preferencePages">
+		<page
+			name="GLSL Ed"
+			class="com.github.vitalibaumtrok.glsled.preferences.GLSLTopPreferencePage"
+			id="com.github.vitalibaumtrok.glsled.preferences.GLSLTopPreferencePage">
+		</page>
+		<page
+			name="Syntax Coloring"
+			class="com.github.vitalibaumtrok.glsled.preferences.GLSLSyntaxColoringPreferencePage"
+			id="com.github.vitalibaumtrok.glsled.preferences.GLSLSyntaxColoringPreferencePage"
+			category="com.github.vitalibaumtrok.glsled.preferences.GLSLTopPreferencePage">
+		</page>
+	</extension>
+
+</plugin>

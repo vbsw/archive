@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GLSL Ed
+Bundle-SymbolicName: com.github.vitalibaumtrok.glsled;singleton:=true
+Bundle-Version: 0.0.1
+Bundle-Activator: com.github.vitalibaumtrok.glsled.Activator
+Bundle-Vendor: Vitali Baumtrok
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
