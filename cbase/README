@@ -1,0 +1,61 @@
+cbase
+-----
+
+
+Abstract
+~~~~~~~~
+cbase is a programing library for the language C. It contains simple data
+structures with functions for general purpose.
+
+
+Download
+~~~~~~~~
+To download the repository to folder 'cbase' run command:
+	$ git clone https://github.com/vitalibaumtrok/cbase.git cbase
+
+
+Development
+~~~~~~~~~~~
+Programing language C is used.
+Stable code is in branch 'master'. Development code is in branch 'devel'.
+
+
+Content
+~~~~~~~~~~~
+Data structures
+	- Buffer (also usable as allocator)
+	- List (of void*)
+	- Stack (for char, size_t, void*)
+	- String Map (also usable to read/write properties file)
+
+Functions for prototyping
+	- file read
+	- file append
+
+
+Compilation
+~~~~~~~~~~~
+Each header and its corresponding implementation file is an independent unit
+and can be compiled alone. Just reference them in your project.
+
+On Linux to run the tests type in:
+	$ make
+	$ ./test
+
+Note: To run 'make' you need the programs make and gcc.
+
+
+Documentation
+~~~~~~~~~~~~~
+On Linux to create the documentation in html format type in:
+	$ make doc
+
+Note: You need the program doxygen.
+
+
+Copyright
+~~~~~~~~~
+Copyright Vitali Baumtrok 2014.
+cbase is distributed under the terms of the Boost Software License,
+Version 1.0. (See accompanying file LICENSE_1_0.txt or copy
+at http://www.boost.org/LICENSE_1_0.txt)
