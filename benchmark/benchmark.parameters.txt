@@ -1,0 +1,11 @@
+10
+32766
+
+
+-- Description --
+
+Enter only positive numbers. One number per line.
+
+The number in line
+	...1 is the number of iterations per test
+	...2 is the length of the array

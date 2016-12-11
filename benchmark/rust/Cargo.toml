@@ -1,0 +1,15 @@
+[package]
+
+name = "benchmark"
+version = "0.1.0"
+authors = [ "Vitali Baumtrok" ]
+
+[[bin]]
+name = "benchmark"
+path = "src/benchmark.rs"
+bench = false
+doc = false
+plugin = false
+
+[dependencies]
+time = "0.1"
